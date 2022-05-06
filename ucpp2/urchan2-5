@@ -1,0 +1,179 @@
+	.text
+	.intel_syntax noprefix
+	.file	"urchan2-5.cpp"
+	.section	.text.startup,"ax",@progbits
+	.p2align	4, 0x90         # -- Begin function __cxx_global_var_init
+	.type	__cxx_global_var_init,@function
+__cxx_global_var_init:                  # @__cxx_global_var_init
+	.cfi_startproc
+# %bb.0:
+	push	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset rbp, -16
+	mov	rbp, rsp
+	.cfi_def_cfa_register rbp
+	movabs	rdi, offset _ZStL8__ioinit
+	call	_ZNSt8ios_base4InitC1Ev
+	movabs	rax, offset _ZNSt8ios_base4InitD1Ev
+	mov	rdi, rax
+	movabs	rsi, offset _ZStL8__ioinit
+	movabs	rdx, offset __dso_handle
+	call	__cxa_atexit
+	pop	rbp
+	.cfi_def_cfa rsp, 8
+	ret
+.Lfunc_end0:
+	.size	__cxx_global_var_init, .Lfunc_end0-__cxx_global_var_init
+	.cfi_endproc
+                                        # -- End function
+	.text
+	.globl	main                    # -- Begin function main
+	.p2align	4, 0x90
+	.type	main,@function
+main:                                   # @main
+	.cfi_startproc
+# %bb.0:
+	push	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset rbp, -16
+	mov	rbp, rsp
+	.cfi_def_cfa_register rbp
+	sub	rsp, 16
+	mov	dword ptr [rbp - 4], 0
+	movabs	rdi, offset _ZSt4cout
+	movabs	rsi, offset .L.str
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	movabs	rdi, offset _ZSt3cin
+	lea	rsi, [rbp - 8]
+	mov	qword ptr [rbp - 16], rax # 8-byte Spill
+	call	_ZNSirsERi
+	cmp	dword ptr [rbp - 8], 0
+	jle	.LBB1_2
+# %bb.1:
+	movabs	rdi, offset _ZSt4cout
+	movabs	rsi, offset .L.str.1
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	mov	esi, dword ptr [rbp - 8]
+	mov	rdi, rax
+	call	_ZNSolsEi
+	mov	rdi, rax
+	movabs	rsi, offset .L.str.2
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	mov	rdi, rax
+	movabs	rsi, offset _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+	call	_ZNSolsEPFRSoS_E
+	jmp	.LBB1_6
+.LBB1_2:
+	cmp	dword ptr [rbp - 8], 0
+	jne	.LBB1_4
+# %bb.3:
+	movabs	rdi, offset _ZSt4cout
+	movabs	rsi, offset .L.str.3
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	mov	esi, dword ptr [rbp - 8]
+	mov	rdi, rax
+	call	_ZNSolsEi
+	mov	rdi, rax
+	movabs	rsi, offset .L.str.4
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	mov	rdi, rax
+	movabs	rsi, offset _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+	call	_ZNSolsEPFRSoS_E
+	jmp	.LBB1_5
+.LBB1_4:
+	movabs	rdi, offset _ZSt4cout
+	movabs	rsi, offset .L.str.3
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	mov	esi, dword ptr [rbp - 8]
+	mov	rdi, rax
+	call	_ZNSolsEi
+	mov	rdi, rax
+	movabs	rsi, offset .L.str.5
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	mov	rdi, rax
+	movabs	rsi, offset _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+	call	_ZNSolsEPFRSoS_E
+.LBB1_5:
+	jmp	.LBB1_6
+.LBB1_6:
+	mov	eax, dword ptr [rbp - 4]
+	add	rsp, 16
+	pop	rbp
+	.cfi_def_cfa rsp, 8
+	ret
+.Lfunc_end1:
+	.size	main, .Lfunc_end1-main
+	.cfi_endproc
+                                        # -- End function
+	.section	.text.startup,"ax",@progbits
+	.p2align	4, 0x90         # -- Begin function _GLOBAL__sub_I_urchan2_5.cpp
+	.type	_GLOBAL__sub_I_urchan2_5.cpp,@function
+_GLOBAL__sub_I_urchan2_5.cpp:           # @_GLOBAL__sub_I_urchan2_5.cpp
+	.cfi_startproc
+# %bb.0:
+	push	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset rbp, -16
+	mov	rbp, rsp
+	.cfi_def_cfa_register rbp
+	call	__cxx_global_var_init
+	pop	rbp
+	.cfi_def_cfa rsp, 8
+	ret
+.Lfunc_end2:
+	.size	_GLOBAL__sub_I_urchan2_5.cpp, .Lfunc_end2-_GLOBAL__sub_I_urchan2_5.cpp
+	.cfi_endproc
+                                        # -- End function
+	.type	_ZStL8__ioinit,@object  # @_ZStL8__ioinit
+	.local	_ZStL8__ioinit
+	.comm	_ZStL8__ioinit,1,1
+	.hidden	__dso_handle
+	.type	.L.str,@object          # @.str
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.L.str:
+	.asciz	"\346\225\264\346\225\260\343\202\222\345\205\245\345\212\233\343\201\227\343\201\246\343\201\217\343\201\240\343\201\225\343\201\204\343\200\202:"
+	.size	.L.str, 38
+
+	.type	.L.str.1,@object        # @.str.1
+.L.str.1:
+	.asciz	"n( "
+	.size	.L.str.1, 4
+
+	.type	.L.str.2,@object        # @.str.2
+.L.str.2:
+	.asciz	" )\343\201\257\346\255\243\343\201\247\343\201\231\343\200\202"
+	.size	.L.str.2, 18
+
+	.type	.L.str.3,@object        # @.str.3
+.L.str.3:
+	.asciz	"n("
+	.size	.L.str.3, 3
+
+	.type	.L.str.4,@object        # @.str.4
+.L.str.4:
+	.asciz	")\343\201\2570\343\201\247\343\201\231."
+	.size	.L.str.4, 13
+
+	.type	.L.str.5,@object        # @.str.5
+.L.str.5:
+	.asciz	")\343\201\257\350\262\240\343\201\247\343\201\231"
+	.size	.L.str.5, 14
+
+	.section	.init_array,"aw",@init_array
+	.p2align	3
+	.quad	_GLOBAL__sub_I_urchan2_5.cpp
+	.ident	"clang version 10.0.0-4ubuntu1 "
+	.section	".note.GNU-stack","",@progbits
+	.addrsig
+	.addrsig_sym __cxx_global_var_init
+	.addrsig_sym __cxa_atexit
+	.addrsig_sym _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+	.addrsig_sym _ZNSirsERi
+	.addrsig_sym _ZNSolsEi
+	.addrsig_sym _ZNSolsEPFRSoS_E
+	.addrsig_sym _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+	.addrsig_sym _GLOBAL__sub_I_urchan2_5.cpp
+	.addrsig_sym _ZStL8__ioinit
+	.addrsig_sym __dso_handle
+	.addrsig_sym _ZSt4cout
+	.addrsig_sym _ZSt3cin
